@@ -1,0 +1,12 @@
+We use hand tracking module and place a timer during each round at the end of comp will produce its hand symbol
+on then screen at the same time take a screenshot of the users hand and count the user's hand symbol using object
+detection concept,and finally compare the hand symbols and produce the result,like that there will be 10 rounds.
+
+Python Libraries used
+1.OpenCV
+2.Threading(for taking ss of user hand and also producing comp result)
+3.Time module.
+4.Tkinter/Pyqt5 module(for frontend purpose like start menu).
+5.Mediapipe-for cv modules but here we are using the hand tracking module.
+
+
