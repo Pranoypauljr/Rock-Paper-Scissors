@@ -21,7 +21,13 @@ while True:
     if(result.multi_hand_landmarks):
         for cords in result.multi_hand_landmarks:
             for id, marks in enumerate(cords.landmark):
-                print(id, marks)
+                #print(id, marks)
+                h, w, c = frame.shape
+                cx, cy = int(marks.x*w), int(marks.y*h)
+                print(id, cx, cy)
+                # the below code line-29,30 is to draw a circle of color over the given coordinate.but if we want to draw over every coordinate then we just need to ignore the if statement.
+                if(id == 10):
+                    cv.circle(frame, (cx, cy), 25, (255, 0, 255), cv.FILLED)
 
             mpDraw.draw_landmarks(frame, cords, mphands.HAND_CONNECTIONS)
 

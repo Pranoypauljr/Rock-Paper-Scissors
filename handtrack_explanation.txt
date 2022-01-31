@@ -1,5 +1,7 @@
+##Explanation for handtrack.py file
 ->line 6-Hands()-parameters-static_image_mode=False-because if set to true then it always tries to detect and track so whole process will be slow but if set to false then it initially detects and find some landmarks and then it further track those landmarks only(relatively fast process).
 ->line 11-we need to convert the given image to rgb since by default opencv process bgr images but the mediapipe will process only rgb images.
 ->line 13-here each time detection and tracking is done,the x,y,z coordinated of the hand will be printed out(multi_hand_landmarks parameter).
 ->line7-to draw coordinates on hands detected.
 ->line 16-18-if a hand is found then we draw lines and dots over the coordinates using those lines of code.
+->line 25-27-the landmarks of the coordinates are initially printed in ratios but we need to print them in values.
